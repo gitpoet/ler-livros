@@ -23,23 +23,20 @@ public class ListLivros{
     }
 
     public int mediaPaginasLidas(){
-        
-        int somaPaginas = 0;
-        int tamanhoLista = 0;
+
+         int media = 0;
+         int somaPaginas = 0;
+         
 
         if(!livros.isEmpty()){
-            tamanhoLista = livros.size();
             for(Livro p: livros){
                 somaPaginas += p.getNumeroPaginas();
+
+                media = somaPaginas / livros.size();
              }
             
         }
-
-        if (tamanhoLista > 0) {
-            return somaPaginas / tamanhoLista;
-        } else {
-            return 0;
-        }
+            return media;
        
     }
 
